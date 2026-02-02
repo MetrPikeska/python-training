@@ -132,12 +132,12 @@ def calculate_distance(coord1, coord2):
 
     distance = R * c
     return distance
-calculate_distance(coordinates[0], coordinates[1])
 
-for i in range(len(coordinates)):
-    for j in range(i + 1, len(coordinates)):
-        dist = calculate_distance(coordinates[i], coordinates[j])
-        print(f"Vzdálenost mezi {coordinates[i]} a {coordinates[j]} je {dist:.2f} km")
+
+for first_coord_idx in range(len(coordinates)):
+    for second_coord_idx in range(first_coord_idx + 1, len(coordinates)):
+        dist = calculate_distance(coordinates[first_coord_idx], coordinates[second_coord_idx])
+        print(f"Vzdálenost mezi {coordinates[first_coord_idx]} a {coordinates[second_coord_idx]} je {dist:.2f} km")
 
 
 

@@ -50,3 +50,36 @@
 # regions.remove("Europe")
 # print("After removing Europe:", len(regions))
 
+# city_attributes = {
+#     "name" : "Praha",
+#     "country" : "Czechia",
+#     "population" : 1309000,
+#     "coordinates" : [50.0755, 14.4378]
+# }
+
+# city_name = city_attributes["name"]
+# city_population = city_attributes["population"]
+# print(f"{city_name} has a population of {city_population} and is located at coordinates {city_attributes['coordinates']}.")
+
+# city_attributes["mayor"] = "Zdeněk Hřib"
+# print("Updated city attributes:", city_attributes)# # Geographical Coordinates of Various Cities
+
+# print(city_attributes["coordinates"])
+
+
+beskydy_vrcholy = [
+    {"name": "Lysá hora", "elevation": 1323, "coordinates": [49.5900, 18.4461]},
+    {"name": "Smrk", "elevation": 1276, "coordinates": [49.5244, 18.5247]},
+    {"name": "Radhošť", "elevation": 1129, "coordinates": [49.5222, 18.4158]},
+    {"name": "Kněhyně", "elevation": 1257, "coordinates": [49.4875, 18.4500]},
+    {"name": "Velký Javorník", "elevation": 918, "coordinates": [49.3667, 18.4333]}]
+
+for vrchol in beskydy_vrcholy:
+    if vrchol["elevation"] > 1200:
+        name = vrchol["name"]
+        elevation = vrchol["elevation"]
+        coordinates = vrchol["coordinates"]
+        print(f"{name} - Elevation: {elevation} m, Coordinates: {coordinates}")
+    else:
+        print(f"{vrchol['name']} is below 1200 meters.")
+

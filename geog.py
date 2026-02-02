@@ -23,3 +23,30 @@
 
 # haversine_distance_nyc_ldn = haversine(syd, ldn)
 # print(f"Distance between New York City and London: {haversine_distance_nyc_ldn:.2f} km")
+
+# point = (39.904202, 116.407394)  # Beijing, China
+
+# print(str(point[0]) +" " + str(point[1]))  # Latitude
+# print(point[1])  # Longitude
+
+
+# regions = [    "North America",
+#     "South America", "Europe",
+#     "Asia", "Africa", "Oceania"]
+
+# region = set(regions)
+# print("Unique regions:", regions)
+
+# regions.append("Antarctica")
+# print("Updated regions:", regions)
+
+# regions.remove("South America")
+# print("After removal:", regions)
+
+# regions.sort()
+# print("Sorted regions:", regions)
+
+# print((len(regions)))  # Number of regions
+# regions.remove("Europe")
+# print("After removing Europe:", len(regions))
+

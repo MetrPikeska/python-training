@@ -1,3 +1,6 @@
 venv/Lib/site-packages/__pycache__/click_plugins.cpython-310.pyc
 venv/
 __pycache__/
+out/
+*.gpkg
+*.csv

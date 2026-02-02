@@ -19,13 +19,15 @@ def load_geodatabase_layer(gdb_path, layer_name):
     
     # Načtení dat pomocí geopandas
     gdf = gpd.read_file(gdb_path, layer=layer_name)
-    
+    #gdf = geodataframe 
+
     print(f"\nNačteno {len(gdf)} záznamů")
     print(f"Sloupce: {list(gdf.columns)}")
     print(f"\nPrvních 5 řádků:")
     print(gdf.head())
     
     return gdf
+
 
 
 def analyze_pollution_data(gdf):

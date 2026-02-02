@@ -67,20 +67,152 @@
 # print(city_attributes["coordinates"])
 
 
-beskydy_vrcholy = [
-    {"name": "Lysá hora", "elevation": 1323, "coordinates": [49.5900, 18.4461]},
-    {"name": "Smrk", "elevation": 1276, "coordinates": [49.5244, 18.5247]},
-    {"name": "Radhošť", "elevation": 1129, "coordinates": [49.5222, 18.4158]},
-    {"name": "Kněhyně", "elevation": 1257, "coordinates": [49.4875, 18.4500]},
-    {"name": "Velký Javorník", "elevation": 918, "coordinates": [49.3667, 18.4333]}]
+# beskydy_vrcholy = [
+#     {"name": "Lysá hora", "elevation": 1323, "coordinates": [49.5900, 18.4461]},
+#     {"name": "Smrk", "elevation": 1276, "coordinates": [49.5244, 18.5247]},
+#     {"name": "Radhošť", "elevation": 1129, "coordinates": [49.5222, 18.4158]},
+#     {"name": "Kněhyně", "elevation": 1257, "coordinates": [49.4875, 18.4500]},
+#     {"name": "Velký Javorník", "elevation": 918, "coordinates": [49.3667, 18.4333]}]
 
-for vrchol in beskydy_vrcholy:
-    if vrchol["elevation"] > 1200:
-        name = vrchol["name"]
-        elevation = vrchol["elevation"]
-        coordinates = vrchol["coordinates"]
-        print(f"{name} - Elevation: {elevation} m, Coordinates: {coordinates}")
+# for vrchol in beskydy_vrcholy:
+#     if vrchol["elevation"] > 1200:
+#         name = vrchol["name"]
+#         elevation = vrchol["elevation"]
+#         coordinates = vrchol["coordinates"]
+#         print(f"{name} - Elevation: {elevation} m, Coordinates: {coordinates}")
+#     else:
+#         print(f"{vrchol['name']} is below 1200 meters.")
+
+coordinates = [
+    (35.6895, 139.6917),
+    (34.0522, -118.2437),
+    (51.5074, -0.1278),
+    (-33.8688, 151.2093),
+    (-33.9249, 18.4241),
+    (55.7558, 37.6173),
+]  # List of tuples representing coordinates
+
+
+
+# counter = 0
+# while counter < len(coordinates):
+#     lat, lon = coordinates[counter]
+#     print(f"Latitude: {lat}, Longitude: {lon}")
+#     counter += 1
+
+
+# for lat, lon in coordinates:
+#     if lat > 0:
+#         hemisphere = "Northern Hemisphere"
+#     elif lat < 0:
+#         hemisphere = "Southern Hemisphere"
+#     else:
+#         hemisphere = "Equator"
+#     print(f"Latitude: {lat}, Longitude: {lon} is in the {hemisphere}.")
+
+# for lat, lon in coordinates:
+#     if lat > 0:
+#         hemisphere = "Northern Hemisphere"
+#     else:
+#         hemisphere = "Southern Hemisphere"
+    
+#     if lon > 0:
+#         direction = "Eastern Hemisphere"
+#     else:
+#         direction = "Western Hemisphere"
+    
+#     print(f"Latitude: {lat}, Longitude: {lon} is in the {hemisphere} and {direction}.")
+
+
+# filtered_coords = []
+# for lat, lon in coordinates:
+#     if lat > 0 and lon > 0:
+#         filtered_coords.append((lat, lon))
+# print("Filtered Coordinates (Northern & Eastern Hemisphere):", filtered_coords)
+
+# southern_count = 0
+
+# for lat, lon in coordinates:
+#     if lat < 0:
+#         southern_count += 1
+# print("Number of coordinates in the Southern Hemisphere:", southern_count)
+
+
+
+seznam_mest = [
+    {"name": "Tokyo", "coordinates": (35.6895, 139.6917)},
+    {"name": "Los Angeles", "coordinates": (34.0522, -118.2437)},
+    {"name": "London", "coordinates": (51.5074, -0.1278)},
+    {"name": "Sydney", "coordinates": (-33.8688, 151.2093)},
+    {"name": "Cape Town", "coordinates": (-33.9249, 18.4241)},
+    {"name": "Moscow", "coordinates": (55.7558, 37.6173)}
+]
+
+# for mesto in seznam_mest:
+#     lat, lon = mesto["coordinates"]
+#     if lat > 0:
+#         hemisphere = "Northern Hemisphere"
+#     else:
+#         hemisphere = "Southern Hemisphere"
+# print(f"{mesto['name']} is in the {hemisphere}.")
+
+# counter = 0
+
+# while counter < len(coordinates):
+#     lat, lon  = seznam_mest[counter]
+#     counter += 1
+#     print(seznam_mest)
+
+for lat, lon in coordinates:
+    if lon > 0:
+        direction = "Eastern Hemisphere"
     else:
-        print(f"{vrchol['name']} is below 1200 meters.")
+        direction = "Western Hemisphere"
+    print(f"Latitude: {lat}, Longitude: {lon} is in the {direction}.")
+
+
+sum_southern = 0
+sum_northern = 0
+
+for lat, lon in coordinates:
+    if lon < 0:
+        sum_southern += 1
+    else:
+        sum_northern += 1
+
+print("Number of coordinates in the Western Hemisphere:", sum_southern, "Number of coordinates in the Eastern Hemisphere:", sum_northern)
+
+
+import random
+
+random_coords = [
+    (random.uniform(-90, 90), random.uniform(-180, 180)) for _ in range(10)
+]
+
+while i in random_coords:
+    lat, lon = i
+    print(f"Latitude: {lat}, Longitude: {lon}")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

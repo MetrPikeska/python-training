@@ -1,25 +1,25 @@
-mesta = [39.904202, 116.407394]  # Beijing, China
-nyc = [40.712776, -74.005974]      # New York City, USA
-ldn = [51.507351, -0.127758]       # London, UK
-syd = [-33.868820, 151.209290]     # Sydney, Australia
-cpt = [-33.924870, 18.424055]      # Cape Town, South Africa
+# mesta = [39.904202, 116.407394]  # Beijing, China
+# nyc = [40.712776, -74.005974]      # New York City, USA
+# ldn = [51.507351, -0.127758]       # London, UK
+# syd = [-33.868820, 151.209290]     # Sydney, Australia
+# cpt = [-33.924870, 18.424055]      # Cape Town, South Africa
 
-def haversine(coord1, coord2):
-    from math import radians, sin, cos, sqrt, atan2
+# def haversine(coord1, coord2):
+#     from math import radians, sin, cos, sqrt, atan2
 
-    R = 6371.0  # Earth radius in kilometers
+#     R = 6371.0  # Earth radius in kilometers
 
-    lat1, lon1 = coord1
-    lat2, lon2 = coord2
+#     lat1, lon1 = coord1
+#     lat2, lon2 = coord2
 
-    dlat = radians(lat2 - lat1)
-    dlon = radians(lon2 - lon1)
+#     dlat = radians(lat2 - lat1)
+#     dlon = radians(lon2 - lon1)
 
-    a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2)**2
-    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+#     a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2)**2
+#     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
-    distance = R * c
-    return distance
+#     distance = R * c
+#     return distance
 
-haversine_distance_nyc_ldn = haversine(syd, ldn)
-print(f"Distance between New York City and London: {haversine_distance_nyc_ldn:.2f} km")
+# haversine_distance_nyc_ldn = haversine(syd, ldn)
+# print(f"Distance between New York City and London: {haversine_distance_nyc_ldn:.2f} km")

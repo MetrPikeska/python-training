@@ -1,3 +1,10 @@
+from math import radians, sin, cos, sqrt, atan2
+import random as rnd
+import time
+
+
+
+
 # mesta = [39.904202, 116.407394]  # Beijing, China
 # nyc = [40.712776, -74.005974]      # New York City, USA
 # ldn = [51.507351, -0.127758]       # London, UK
@@ -180,31 +187,37 @@
 
 
 
-import random as rnd
+# import random as rnd
 
-def generate_random_coordinates(n):
-    coordinates = []
-    for _ in range(n):
-        lat = rnd.uniform(-90, 90)
-        lon = rnd.uniform(-180, 180)
-        coordinates.append((lat, lon))
-    return coordinates
+# def generate_random_coordinates(n):
+#     coordinates = []
+#     for _ in range(n):
+#         lat = rnd.uniform(-90, 90)
+#         lon = rnd.uniform(-180, 180)
+#         coordinates.append((lat, lon))
+#     return coordinates
 
-for lat, lon in generate_random_coordinates(59):
-    if lat > 0 and lon > 0:
-        hemisphere = "Northern and Eastern Hemisphere"
-    elif lat > 0 and lon < 0:
-        hemisphere = "Northern and Western Hemisphere"
-    elif lat < 0 and lon > 0:
-        hemisphere = "Southern and Eastern Hemisphere"
-    else:
-        hemisphere = "Southern and Western Hemisphere"
-    print(f"Latitude: {lat}, Longitude: {lon} is in the {hemisphere}.")
-
-
+# for lat, lon in generate_random_coordinates(59):
+#     if lat > 0 and lon > 0:
+#         hemisphere = "Northern and Eastern Hemisphere"
+#     elif lat > 0 and lon < 0:
+#         hemisphere = "Northern and Western Hemisphere"
+#     elif lat < 0 and lon > 0:
+#         hemisphere = "Southern and Eastern Hemisphere"
+#     else:
+#         hemisphere = "Southern and Western Hemisphere"
+#     print(f"Latitude: {lat}, Longitude: {lon} is in the {hemisphere}.")
 
 
 
+# def multiply_coordinates(coord1, coord2):
+#     lat1, lon1 = coord1
+#     lat2, lon2 = coord2
+#     return (lat1 * lat2, lon1 * lon2)
+    
+
+
+# print(multiply_coordinates((39.904202, 116.407394), (40.712776, -74.005974)))
 
 
 

@@ -55,3 +55,4 @@ def haversine(lat1, lon1, lat2, lon2):
 distance = haversine(czech_cities[0]["coords"][0], czech_cities[0]["coords"][1],
                      czech_cities[1]["coords"][0], czech_cities[1]["coords"][1])
 print(f"Distance: {distance:.2f} km")
+

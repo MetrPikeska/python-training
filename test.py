@@ -1,13 +1,13 @@
 import math
 
 stanice_data = [
-    {"nazev" : "Ostrava", "souradnice" : (49.8209, 18.2625), "hodnoty" : [20000]},
-    {"nazev" : "Brno", "souradnice" : (49.1951, 16.6068), "hodnoty" : [15000]},
-    {"nazev" : "Praha", "souradnice" : (50.0755, 14.4378), "hodnoty" : [30000]},
-    {"nazev" : "Plzen", "souradnice" : (49.7475, 13.3776), "hodnoty" : [10000]},
-    {"nazev" : "Liberec", "souradnice" : (50.7671, 15.0562), "hodnoty" : [8000]},
-    {"nazev" : "Olomouc", "souradnice" : (49.5938, 17.2509), "hodnoty" : [12000]},
-    { "nazev" : "Hradec Kralove", "souradnice" : (50.2092, 15.8328), "hodnoty" : [9000]}
+    {"nazev" : "Ostrava", "souradnice" : (49.8209, 18.2625), "teplota" : [19]},
+    {"nazev" : "Brno", "souradnice" : (49.1951, 16.6068), "teplota" : [15]},
+    {"nazev" : "Praha", "souradnice" : (50.0755, 14.4378), "teplota" : [13]},
+    {"nazev" : "Plzen", "souradnice" : (49.7475, 13.3776), "teplota" : [10]},
+    {"nazev" : "Liberec", "souradnice" : (50.7671, 15.0562), "teplota" : [8]},
+    {"nazev" : "Olomouc", "souradnice" : (49.5938, 17.2509), "teplota" : [12]},
+    { "nazev" : "Hradec Kralove", "souradnice" : (50.2092, 15.8328), "teplota" : [9]}
                                                                         
 ]
 
@@ -29,6 +29,19 @@ for stanice in stanice_data:
     if prumerne_hodnoty[-1] > 15000:
         nadprumerne_hodnoty.append(stanice["nazev"])
     print("Stanice s nadprumernou hodnotou:", nadprumerne_hodnoty)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # northest_point = max(stanice_data, key=lambda x: x["souradnice"][0])
 # print(f"Nejsevernejsi stanice je {northest_point['nazev']} na souradnicich {northest_point['souradnice']}")

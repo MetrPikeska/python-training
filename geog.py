@@ -83,14 +83,9 @@
 #     else:
 #         print(f"{vrchol['name']} is below 1200 meters.")
 
-coordinates = [
-    (35.6895, 139.6917),
-    (34.0522, -118.2437),
-    (51.5074, -0.1278),
-    (-33.8688, 151.2093),
-    (-33.9249, 18.4241),
-    (55.7558, 37.6173),
-]  # List of tuples representing coordinates
+
+
+# List of tuples representing coordinates
 
 
 
@@ -139,14 +134,14 @@ coordinates = [
 
 
 
-seznam_mest = [
-    {"name": "Tokyo", "coordinates": (35.6895, 139.6917)},
-    {"name": "Los Angeles", "coordinates": (34.0522, -118.2437)},
-    {"name": "London", "coordinates": (51.5074, -0.1278)},
-    {"name": "Sydney", "coordinates": (-33.8688, 151.2093)},
-    {"name": "Cape Town", "coordinates": (-33.9249, 18.4241)},
-    {"name": "Moscow", "coordinates": (55.7558, 37.6173)}
-]
+# seznam_mest = [
+#     {"name": "Tokyo", "coordinates": (35.6895, 139.6917)},
+#     {"name": "Los Angeles", "coordinates": (34.0522, -118.2437)},
+#     {"name": "London", "coordinates": (51.5074, -0.1278)},
+#     {"name": "Sydney", "coordinates": (-33.8688, 151.2093)},
+#     {"name": "Cape Town", "coordinates": (-33.9249, 18.4241)},
+#     {"name": "Moscow", "coordinates": (55.7558, 37.6173)}
+# ]
 
 # for mesto in seznam_mest:
 #     lat, lon = mesto["coordinates"]
@@ -161,44 +156,50 @@ seznam_mest = [
 # while counter < len(coordinates):
 #     lat, lon  = seznam_mest[counter]
 #     counter += 1
-#     print(seznam_mest)
+# #     print(seznam_mest)
 
-for lat, lon in coordinates:
-    if lon > 0:
-        direction = "Eastern Hemisphere"
+# for lat, lon in coordinates:
+#     if lon > 0:
+#         direction = "Eastern Hemisphere"
+#     else:
+#         direction = "Western Hemisphere"
+#     print(f"Latitude: {lat}, Longitude: {lon} is in the {direction}.")
+
+
+# sum_southern = 0
+# sum_northern = 0
+
+# for lat, lon in coordinates:
+#     if lon < 0:
+#         sum_southern += 1
+#     else:
+#         sum_northern += 1
+
+# print("Number of coordinates in the Western Hemisphere:", sum_southern, "Number of coordinates in the Eastern Hemisphere:", sum_northern)
+
+
+
+
+import random as rnd
+
+def generate_random_coordinates(n):
+    coordinates = []
+    for _ in range(n):
+        lat = rnd.uniform(-90, 90)
+        lon = rnd.uniform(-180, 180)
+        coordinates.append((lat, lon))
+    return coordinates
+
+for lat, lon in generate_random_coordinates(59):
+    if lat > 0 and lon > 0:
+        hemisphere = "Northern and Eastern Hemisphere"
+    elif lat > 0 and lon < 0:
+        hemisphere = "Northern and Western Hemisphere"
+    elif lat < 0 and lon > 0:
+        hemisphere = "Southern and Eastern Hemisphere"
     else:
-        direction = "Western Hemisphere"
-    print(f"Latitude: {lat}, Longitude: {lon} is in the {direction}.")
-
-
-sum_southern = 0
-sum_northern = 0
-
-for lat, lon in coordinates:
-    if lon < 0:
-        sum_southern += 1
-    else:
-        sum_northern += 1
-
-print("Number of coordinates in the Western Hemisphere:", sum_southern, "Number of coordinates in the Eastern Hemisphere:", sum_northern)
-
-
-import random
-
-random_coords = [
-    (random.uniform(-90, 90), random.uniform(-180, 180)) for _ in range(10)
-]
-
-while i in random_coords:
-    lat, lon = i
-    print(f"Latitude: {lat}, Longitude: {lon}")
-    
-
-
-
-
-
-
+        hemisphere = "Southern and Western Hemisphere"
+    print(f"Latitude: {lat}, Longitude: {lon} is in the {hemisphere}.")
 
 
 

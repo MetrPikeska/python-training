@@ -1,19 +1,20 @@
-import stanice
+import csv
 from math import radians, sin, cos, sqrt, atan2
-import csv
 
-data_file = 'stanice.csv'
+class Stanice:
+    def __init__(self, nazev, lat, lon):
+        self.nazev = nazev
+        self.lat = lat
+        self.lon = lon
 
-import csv
+    def vypis_info(self):
+        print(f"Stanice: {self.nazev} na souřadnicích ({self.lat}, {self.lon})")
 
-data_ze_souboru = []
-with open('stanice.csv', mode='r', encoding='utf-8') as soubor:
-    reader = csv.DictReader(soubor)
-    for radek in reader:
-        # Pozor: CSV načítá všechno jako text, souřadnice musíš převést na float!
-        radek['lat'] = float(radek['lat'])
-        radek['lon'] = float(radek['lon'])
-        data_ze_souboru.append(radek)
+# Tento kód se spustí pouze tehdy, když je soubor spuštěn přímo
+if __name__ == "__main__":
+    praha = Stanice("Praha", 50.07, 14.43)
+    brno = Stanice("Brno", 49.19, 16.60)
 
-print(data_ze_souboru[0]) # Vypíše první stanici jako slovník
+    praha.vypis_info()
+    brno.vypis_info()
 
